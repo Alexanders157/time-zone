@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'timezone' => 'UTC',
         ]);
+
+        $this->call(UsersTableSeeder::class);
     }
 }
+
